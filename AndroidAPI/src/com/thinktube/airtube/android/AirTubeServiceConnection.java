@@ -23,6 +23,8 @@ import android.os.RemoteException;
 public class AirTubeServiceConnection implements AirTubeInterfaceI {
 	protected static final String TAG = "AirTubeServiceInterface";
 	Intent intent = new Intent("AirTube_server");
+	intent.setPackage(this.getPackageName());
+	
 	private boolean bound = false;
 	private Context context;
 	private AirTubeInterfaceAidl serviceIf;
